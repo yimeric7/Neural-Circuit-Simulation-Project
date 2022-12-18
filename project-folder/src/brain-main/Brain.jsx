@@ -12,7 +12,6 @@ export default function Brain() {
         const brainLoader = new GLTFLoader();
         brainLoader.load('src/brain-model/scene.gltf', (gltfScene) => {
             loadedModel = gltfScene;
-
             gltfScene.scene.rotation.y = Math.PI / 8;
             gltfScene.scene.position.y = 0;
             gltfScene.scene.scale.set(35, 35, 35);

@@ -9,8 +9,4 @@ To run the project locally, run the following commands:
 
 
 ### Contributors
-Inception of idea, Research, and UI/UX: Ricardo Gato Gil        
-ML Software Engineer: Eric Yim    
-Frontend Software Engineer: Mohammad Al-Robaie
-3D Graphics Software Engineer: Asim Ali   
-Project Manager and QA: Owen Kluck  
+Ricardo Gato Gil, Eric Yim, Mohammad Al-Robaie, Asim Ali, and Owen Kluck  

@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/logo.png'
 
 
-function ContainerInsideExample() {
+export default function UserNavbar() {
   return (
     <Navbar fixed='top' expand="lg" variant="light" >
       <Container >
@@ -17,5 +17,3 @@ function ContainerInsideExample() {
     </Navbar>
   );
 }
-
-export default ContainerInsideExample;

@@ -17,6 +17,8 @@
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-navbar-offcanvas": "^1.0.3",
     "react-dom": "^18.2.0",
+    "react-router": "^6.6.0",
+    "react-router-dom": "^6.6.0",
     "scenejs": "^1.8.4",
     "three": "^0.147.0",
     "twit": "^2.2.11"

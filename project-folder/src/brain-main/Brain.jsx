@@ -3,8 +3,8 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import SceneInit from '../utils/SceneInit';
 
 export default function Brain() {
+    const test = new SceneInit('brainCanvas');
     useEffect(() => {
-        const test = new SceneInit('brainCanvas');
         test.initialize();
         test.animate();
 
@@ -26,9 +26,14 @@ export default function Brain() {
         };
         animate();
     }, []);
+    //
+    // const handleClick = () => {
+    //     test.scene.clear()
+    // }
 
     return (
         <div>
+            {/*<button onClick={handleClick}>click to close</button>*/}
             <canvas id="brainCanvas"/>
         </div>
     );

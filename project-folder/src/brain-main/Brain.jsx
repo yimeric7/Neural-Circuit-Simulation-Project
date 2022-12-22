@@ -13,8 +13,8 @@ export default function Brain() {
         brainLoader.load('src/brain-model/scene.gltf', (gltfScene) => {
             loadedModel = gltfScene;
             gltfScene.scene.rotation.x = Math.PI / 8;
-            gltfScene.scene.position.y = -1;
-            gltfScene.scene.scale.set(35, 35, 35);
+            gltfScene.scene.position.y = -5;
+            gltfScene.scene.scale.set(50, 50, 50);
             test.scene.add(gltfScene.scene);
         });
 

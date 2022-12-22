@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import '../assets/nueron.jpeg'
 
 // Helper file to initialize scene
 export default class SceneInit {
@@ -62,9 +63,11 @@ export default class SceneInit {
         // if window resizes
         window.addEventListener('resize', () => this.onWindowResize(), false);
 
+        this.scene.background = new THREE.Color('#F5F5F5')
         // NOTE: Load space background.
         // this.loader = new THREE.TextureLoader();
-        // this.scene.background = this.loader.load('./pics/space.jpeg');
+        // this.scene.background = this.loader.load('../assets/nueron.jpeg');
+
 
         // NOTE: Declare uniforms to pass into glsl shaders.
         // this.uniforms = {

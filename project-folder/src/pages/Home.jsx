@@ -7,10 +7,7 @@ export default function Home() {
     return (
         <>
             <UserNavbar />
-            {/*<Brain />*/}
+            <Brain />
         </>
     )
 }
-
-/** TODO: New brain is currently rendering
- * each time user goes to home page **/

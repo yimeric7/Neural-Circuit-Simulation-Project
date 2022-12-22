@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import Stats from 'three/examples/jsm/libs/stats.module';
+import '../assets/nueron.jpeg'
 
 // Helper file to initialize scene
 export default class SceneInit {
@@ -18,7 +18,6 @@ export default class SceneInit {
 
         // NOTE: Additional components.
         this.clock = undefined;
-        this.stats = undefined;
         this.controls = undefined;
 
         // NOTE: Lighting is basically required.
@@ -49,8 +48,6 @@ export default class SceneInit {
 
         this.clock = new THREE.Clock();
         this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-        this.stats = Stats();
-        document.body.appendChild(this.stats.dom);
 
         // ambient light which is for the whole scene
         this.ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
@@ -66,9 +63,11 @@ export default class SceneInit {
         // if window resizes
         window.addEventListener('resize', () => this.onWindowResize(), false);
 
+        this.scene.background = new THREE.Color('#F5F5F5')
         // NOTE: Load space background.
         // this.loader = new THREE.TextureLoader();
-        // this.scene.background = this.loader.load('./pics/space.jpeg');
+        // this.scene.background = this.loader.load('../assets/nueron.jpeg');
+
 
         // NOTE: Declare uniforms to pass into glsl shaders.
         // this.uniforms = {
@@ -83,7 +82,6 @@ export default class SceneInit {
         // requestAnimationFrame(this.animate.bind(this));
         window.requestAnimationFrame(this.animate.bind(this));
         this.render();
-        this.stats.update();
         this.controls.update();
     }
 

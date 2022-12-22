@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@react-spring/parallax": "^9.6.1"
+  }
+}

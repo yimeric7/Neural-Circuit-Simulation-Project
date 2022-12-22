@@ -12,22 +12,19 @@ export default function Brain() {
         const brainLoader = new GLTFLoader();
         brainLoader.load('src/brain-model/scene.gltf', (gltfScene) => {
             loadedModel = gltfScene;
-
-            gltfScene.scene.rotation.y = Math.PI / 8;
-            gltfScene.scene.position.y = 0;
-            gltfScene.scene.scale.set(35, 35, 35);
+            gltfScene.scene.rotation.x = Math.PI / 8;
+            gltfScene.scene.position.y = -5;
+            gltfScene.scene.scale.set(50, 50, 50);
             test.scene.add(gltfScene.scene);
         });
 
-        // const animate = () => {
-        //     if (loadedModel) {
-        //         loadedModel.scene.rotation.x += 0.01;
-        //         loadedModel.scene.rotation.y += 0.01;
-        //         loadedModel.scene.rotation.z += 0.01;
-        //     }
-        //     requestAnimationFrame(animate);
-        // };
-        // animate();
+        const animate = () => {
+            if (loadedModel) {
+                loadedModel.scene.rotation.y += 0.01;
+            }
+            requestAnimationFrame(animate);
+        };
+        animate();
     }, []);
 
     return (

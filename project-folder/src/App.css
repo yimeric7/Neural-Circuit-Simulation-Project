@@ -48,12 +48,36 @@
 
 .neuro {
   font-family: system-ui;
+  font-size: 37px;
   letter-spacing: -.25pc;
   color: #1E2D7B
 }
 
 .Sim {
   font-family: system-ui;
+  font-weight: lighter;
+  font-size: 37px;
+  letter-spacing: -.25pc;
+  color: rgb(146, 158, 246)
+}
+
+.footer{
+  position: absolute;
+  width: 100%;
+  background-color:#ECF5FF;
+  text-align: center;
+
+}
+.neuroFooter {
+  font-family: system-ui;
+  font-size: 30px;
+  letter-spacing: -.25pc;
+  color: #1E2D7B
+}
+
+.SimFooter {
+  font-family: system-ui;
+  font-size: 30px;
   font-weight: lighter;
   letter-spacing: -.25pc;
   color: rgb(146, 158, 246)

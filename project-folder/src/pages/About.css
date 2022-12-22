@@ -1,0 +1,10 @@
+.head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2cd4d9;
+    line-height: 48px;
+}
+.aboutnav {
+    background-color: white;
+    height: 80px;
+    text-align: center;
+}

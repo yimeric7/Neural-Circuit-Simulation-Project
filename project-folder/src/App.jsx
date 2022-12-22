@@ -5,7 +5,7 @@ import Header from './components/Header.jsx'
 import './App.css'
 import {Route, Routes} from "react-router";
 import Home from "./pages/Home.jsx";
-import AboutUs from "./components/AboutUs.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 export default function App() {
     return (

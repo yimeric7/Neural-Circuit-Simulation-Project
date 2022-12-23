@@ -8,8 +8,8 @@ export default function Home() {
     return (
         <>
             <UserNavbar />
-            {/*<Brain />*/}
-            <Footer />
+            <Brain />
+            {/*<Footer />*/}
         </>
     )
 }

@@ -3,9 +3,10 @@ The first iterations of this project are meant to develop a base model that inco
 
 ## Technologies
 This will be built using Three js, React Three Fiber, React Three Drei, and vite. This project will be published in the near future, but in the meantime, it can only be ran locally.
-To run the project locally, run the following commands:    
-1. npm install    
-2. npm run dev   
+To run the project locally, run the following commands:   
+1. cd project-folder
+2. npm install    
+3. npm run dev   
 
 
 ### Contributors

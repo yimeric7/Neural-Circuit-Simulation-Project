@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "@react-three/drei": "^9.47.1",
     "@react-three/fiber": "^8.9.1",
     "bootstrap": "^5.2.3",

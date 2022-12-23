@@ -24,3 +24,13 @@ export const renderNewModel = (canvas, BRAIN) => {
 
     animate();
 }
+
+export const createNewPartedBrain = (canvas, BRAIN) => {
+    canvas.clearRender()
+    renderNewModel(canvas, BRAIN)
+}
+
+export const createNewIntactBrain = (canvas, BRAIN) => {
+    canvas.clearRender()
+    renderNewModel(canvas, BRAIN)
+}

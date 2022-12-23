@@ -75,7 +75,7 @@ export default function Brain() {
             {/*<button onClick={handleClick}>click to close</button>*/}
             <canvas id="brainCanvas" />
             <button className='btn-ms-2' onClick={() => changeView()}>{buttonText}</button>
-            {render(myCanvas, PARTED_BRAIN)}
+            {render(myCanvas, view)}
         </div>
     );
 }

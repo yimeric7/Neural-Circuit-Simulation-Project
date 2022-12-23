@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@react-spring/parallax": "^9.6.1"
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@react-spring/parallax": "^9.6.1",
+    "mdb-react-ui-kit": "^5.1.0"
   }
 }

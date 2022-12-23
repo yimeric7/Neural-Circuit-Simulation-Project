@@ -2,16 +2,18 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/logo.png'
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdb-react-ui-kit';
 //        <h1><img src = {logo} height = '33px'/><span className='neuroFooter' fontSize ='33px'>neuro</span ><span className='SimFooter'>SIM</span></h1>
 
 
 export default function Footer() {
   return (
     <MDBFooter  className='footer'  >
+      <h1><img src = {logo} height = '33px'/><span className='neuroFooter' fontSize ='33px'>neuro</span ><span className='SimFooter'>SIM</span></h1>
+
       <MDBContainer className='p-4'>
-        {/* <section className='mb-4'>
-          <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
+        <section className='mb-4'>
+          <MDBBtn outline color="light" floating className='m- btn-floating' href='#!' role='button'>
             <MDBIcon fab icon='facebook-f' />
           </MDBBtn>
 
@@ -34,9 +36,9 @@ export default function Footer() {
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='github' />
           </MDBBtn>
-        </section> */}
+        </section>
 
-        {/* <section className=''>
+        <section className=''>
           <form action=''>
             <MDBRow className='d-flex justify-content-center'>
               <MDBCol size="auto">
@@ -56,7 +58,7 @@ export default function Footer() {
               </MDBCol>
             </MDBRow>
           </form>
-        </section> */}
+        </section>
 
         <section className='f-p-mb-4'>
           <p>

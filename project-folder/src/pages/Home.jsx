@@ -9,7 +9,7 @@ export default function Home() {
         <>
             <UserNavbar />
             <Brain />
-            {/*<Footer />*/}
+            {/* <Footer /> */}
         </>
     )
 }

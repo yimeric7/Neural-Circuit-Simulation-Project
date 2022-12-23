@@ -4,7 +4,7 @@ import UserNavBar from "../components/Navbar.jsx";
 import './About.css'
 
 export default function AboutUs() {
-    const { myCanvas } = useScene()
+    const { myCanvas} = useScene()
 
     // On load, remove brain (this isn't working due to how I currently have clear render
     // Will have to change it to delete scene, rather than delete model.

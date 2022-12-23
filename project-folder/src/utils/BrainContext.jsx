@@ -8,9 +8,9 @@ export function useScene() {
 }
 
 export function SceneProvider ({ children }) {
-    const INTACT_BRAIN = 'src/brain-model/Brain.gltf'
-    const PARTED_BRAIN = 'src/brain-model/partedBrain.glb'
-    let myCanvas = new SceneInit('brainCanvas');
+    const INTACT_BRAIN = 'src/brain-model/Brain.gltf';
+    const PARTED_BRAIN = 'src/brain-model/partedBrain.glb';
+    const myCanvas = new SceneInit('brainCanvas');
 
     const value = {
         myCanvas,
@@ -24,3 +24,4 @@ export function SceneProvider ({ children }) {
         </SceneContext.Provider>
     )
 }
+

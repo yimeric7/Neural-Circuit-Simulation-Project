@@ -6,6 +6,7 @@ import { PartedBrain } from '../../brain-model/PartedBrain.jsx';
 import { useScene } from "../../utils/BrainContext.jsx";
 import renderBrain from '../../utils/BrainRender.jsx';
 import DropDownMenu from "../../components/DropDownMenu.jsx";
+import {useSnapshot} from "valtio";
 
 export default function Home() {
     const { INTACT_VIEW, PARTED_VIEW } = useScene();
@@ -22,9 +23,22 @@ export default function Home() {
         }
     }
 
+    function PickerTest() {
+        const { state } = useScene()
+        const snap = useSnapshot(state);
+        return (
+            <div style={{ position: 'absolute', top: '85%', left: '40%',
+                transform: 'transform: translate(-85%, -40%)',
+                fontSize: '60px', fontWeight: 'bold', lineHeight: '60px'}}>
+                {snap.current}
+            </div>
+        )
+    }
+
     return (
         <div style={{ backgroundColor: '#F5F5F5', width: '100%', margin: 'auto' }}>
             <UserNavbar />
+            <PickerTest/>
             <div style={{ width: '100%', height: '900px' }}>
                 <DropDownMenu />
                 <button className='view-button' position='center' onClick={() => changeView()}>

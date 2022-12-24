@@ -7,11 +7,11 @@ import { IntactBrain } from '../brain-model/IntactBrain';
 import { PartedBrain } from '../brain-model/PartedBrain';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { MDBBtn } from 'mdb-react-ui-kit';
 const INTACT_VIEW = "Intact View"; const PARTED_VIEW = "Parted View"
 
 const DropDownMenu = () => {
     const [open, setOpen] = React.useState(false);
-
     const handleOpen = () => {
       setOpen(!open);
     };

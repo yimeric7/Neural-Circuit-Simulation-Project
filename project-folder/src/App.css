@@ -99,6 +99,15 @@ nav {
   position: relative;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
+.view-button:hover{
+  background-color: aliceblue ;
+  border-color: #1E2D7B;
+  
+ }
+ 
+ .view-button:hover > .btnText{
+ color: #1E2D7B;
+ }
 
 .dropdown {
   position: relative;
@@ -112,6 +121,15 @@ nav {
   margin-left: 2%;
   width: 21%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+.dropdown-btn:hover{
+ background-color: aliceblue ;
+ border-color: #1E2D7B;
+ 
+}
+
+.dropdown-btn:hover > .btnText{
+color: #1E2D7B;
 }
 .menu {
   max-height: 400%;

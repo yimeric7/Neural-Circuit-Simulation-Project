@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.css'
 import {Route, Routes} from "react-router";
-import Home from "./pages/Home.jsx";
+import OldHome from "./pages/OldHome.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import {SceneProvider} from "./utils/BrainContext.jsx";
-import Test from "./pages/Test.jsx";
+import Home from "./pages/Home.jsx";
 import {RingLoader} from "react-spinners";
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 0)
+        }, 0) // <- Set loading screen animation time
     }, [])
 
     return (
@@ -26,9 +26,8 @@ export default function App() {
                     transform: 'transform: translate(-32%, -38%)'}}
             />) : (
             <Routes>
-                <Route path={'/'} element={<Home/>}/>
-                <Route path={'/about'} element={<AboutUs/>}/>
-                <Route path={'/test'} element={<Test/>}/>
+                <Route path={'/'} element={<Home />}/>
+                <Route path={'/about'} element={<AboutUs />}/>
             </Routes>)}
         </SceneProvider>
     );

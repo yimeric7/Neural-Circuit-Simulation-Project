@@ -23,6 +23,7 @@ export default function Home() {
         }
     }
 
+    // Move this into components
     function PickerTest() {
         const { state } = useScene()
         const snap = useSnapshot(state);

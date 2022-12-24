@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useScene } from "../utils/BrainContext.jsx";
 import { useSnapshot } from "valtio";
 
 export function IntactBrain(props) {
-  const { INTACT_BRAIN, state } = useScene()
+  const { INTACT_BRAIN, state, menuItems, setMenuItems } = useScene()
   const { nodes, materials } = useGLTF(INTACT_BRAIN)
   const [hovered, setHovered] = useState(null)
   const meshRef = useRef();
@@ -18,13 +18,20 @@ export function IntactBrain(props) {
         meshRef.current.rotation.y += 0.01;
     });
 
+  // Sets menu items
+  useEffect(() => {
+    meshRef.current.children.map(mesh => {
+      menuItems.push(mesh.material.name)
+    })
+  }, [])
+
   return (
     <group ref={meshRef} {...props} dispose={null}
            // Pointer events
            onPointerOver = {(e) => {e.stopPropagation(), setHovered(e.object.material.name)}}
            onPointerOut = {(e) => {e.intersections.length === 0 && setHovered(null)}}
            onPointerDown = {(e) => {e.stopPropagation(); state.current = e.object.material.name}}
-           onPointerMissed = {(e) => {state.current = null}}
+           onPointerMissed = {() => {state.current = null}}
     >
       <mesh material-color={snap.items.Olfactory_Bulb_R} geometry={nodes.Olfactory_Bulb_R.geometry} material={materials.Olfactory_bulb} position={[2.74, 8.48, 1.12]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
       <mesh material-color={snap.items.Olfactory_Bulb_L} geometry={nodes.Olfactory_Bulb_L.geometry} material={materials['Olfactory_bulb.001']} position={[-0.02, 6.74, -3.13]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />

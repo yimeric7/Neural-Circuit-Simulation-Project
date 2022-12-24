@@ -12,15 +12,16 @@ export function SceneProvider ({ children }) {
     const PARTED_VIEW = "Parted View";
     const INTACT_BRAIN = 'src/brain-model/imgs/IntactBrain.glb';
     const PARTED_BRAIN = 'src/brain-model/imgs/PartedBrain.glb';
+    let menuItems = [];
 
     // depending on what's being selected (description will display)
     const state = proxy({
         current: null,
         items: {
-            Olfactory_Bulb_R: '#f002ff',
-            Olfactory_Bulb_L: '#f002ff',
-            Cerebrum_R: '#f002ff',
-            Cerebrum_L: '#f002ff',
+            Olfactory_Bulb_R: '#ffffff',
+            Olfactory_Bulb_L: '#ffffff',
+            Cerebrum_R: '#ffffff',
+            Cerebrum_L: '#ffffff',
             Brain_base: '#ffffff'
         }
     })
@@ -29,13 +30,6 @@ export function SceneProvider ({ children }) {
     useEffect(() => {
 
     }, [state])
-
-    const menuItems = [
-        'Olfactory_Bulb_R',
-        'Olfactory_Bulb_L',
-        'Cerebrum_R',
-        'Cerebrum_L',
-        'Brain_base']
 
     const value = {
         INTACT_BRAIN,

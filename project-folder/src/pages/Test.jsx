@@ -13,8 +13,10 @@ const INTACT_VIEW = "Intact View"; const PARTED_VIEW = "Parted View"
 const DropDownMenu = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
-      setOpen(!open);
+      setOpen(!open);	
     };
+  
+
     return (
         <div className="dropdown" >
       <button  className="dropdown-btn" onClick={handleOpen}><span className='btnText'>Select Component ⮛</span></button>

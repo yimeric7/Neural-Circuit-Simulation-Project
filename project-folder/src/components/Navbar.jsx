@@ -5,8 +5,6 @@ import { useNavigate } from "react-router";
 
 export default function UserNavbar() {
     const nav = useNavigate();
-
-
     return (
         <div style={{ padding: '3rem', backgroundColor: '#F5F5F5' }}>
             <Navbar fixed='top' expand="lg" variant="light" >

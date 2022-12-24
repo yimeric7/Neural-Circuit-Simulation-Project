@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react';
-import { useScene } from '../utils/BrainContext.jsx'
-import UserNavBar from "../components/Navbar.jsx";
+import React from 'react';
+import UserNavBar from "../../components/Navbar.jsx";
 import './About.css'
+import Footer from "../../components/Footer.jsx";
 
 export default function AboutUs() {
-    const { myCanvas} = useScene()
-
-    // On load, remove brain (this isn't working due to how I currently have clear render
-    // Will have to change it to delete scene, rather than delete model.
-    // useEffect(() => {
-    //     myCanvas.clearRender()
-    // })
-
     return (
         <>
-            <div style={{padding: 'auto'}}>
-                <UserNavBar/>
-            </div>
+            <UserNavBar/>
             <div style={{backgroundColor: '#F5F5F5', width: '100%'}}>
                 <div style={{width: '100%', textAlign: 'center'}}>
                     <span style={{fontSize: '70px', lineHeight: '70px',
@@ -51,6 +41,7 @@ export default function AboutUs() {
                     <p>your mom</p>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

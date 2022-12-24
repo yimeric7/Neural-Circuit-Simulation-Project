@@ -7,7 +7,7 @@ import React, { useState, useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import {proxy, useSnapshot} from 'valtio'
-const INTACT_BRAIN = 'src/brain-model/IntactBrain.glb';
+const INTACT_BRAIN = 'src/brain-model/imgs/IntactBrain.glb';
 
 
 export function IntactBrain(props) {

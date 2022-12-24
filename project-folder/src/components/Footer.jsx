@@ -1,19 +1,11 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import logo from '../assets/logo.png'
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdb-react-ui-kit';
-import {Link} from "react-router-dom";
-//        <h1><img src = {logo} height = '33px'/><span className='neuroFooter' fontSize ='33px'>neuro</span ><span className='SimFooter'>SIM</span></h1>
-
+import { MDBFooter, MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 
 export default function Footer() {
   return (
     <MDBFooter className='footer'>
-
       <div style={{backgroundColor: '#1E2D7B'}}>
       <h1 onClick={() => nav('/')}><span className='neuroFooter'>neuro</span ><span className='SimFooter'>SIM</span></h1>
-
         <div style={{width: '100%', textAlign: 'center', padding: '1rem'}}>
           <h1  class = 'footerHead'>Thank you for checking out our project!</h1>
         </div>
@@ -31,12 +23,10 @@ export default function Footer() {
             <span className='link-names'>Eric Yim - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='rounded-5' href='#!' role='button'>
             <span className='link-names'>Ricardo Gato - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='rounded-5'
                   href='https://www.linkedin.com/in/mohammad-al-robaie-2b3572205/' role='button'>
             <span className='link-names'>Mohammad Al-Robaie - &nbsp;</span>
@@ -48,22 +38,17 @@ export default function Footer() {
             <span className='link-names'>Owen Kluck - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
-          
           <MDBBtn outline color="light" floating className='rounded-5'
                   href='https://www.linkedin.com/in/asim-ali-5780b8239/' role='button'>
             <span className='link-names'>Asim Ali - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
-
         </section>
-
           <p style={{width: '80%', display: 'flex', justifySelf: 'center',
             justifyContent: 'center', marginTop: '2rem',
             margin: 'auto'}}>
-
           </p>
       </div>
-
     </MDBFooter>
   );
 }

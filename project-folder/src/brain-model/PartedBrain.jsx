@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.0.9 partedBrain.glb
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-const PARTED_BRAIN = 'src/brain-model/PartedBrain.glb';
+const PARTED_BRAIN = 'src/brain-model/imgs/PartedBrain.glb';
 
 export function PartedBrain(props) {
   const meshRef = useRef();

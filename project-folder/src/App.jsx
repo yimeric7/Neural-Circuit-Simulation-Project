@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css'
-import {Route, Routes} from "react-router";
-import OldHome from "./pages/OldHome.jsx";
-import AboutUs from "./pages/AboutUs.jsx";
-import {SceneProvider} from "./utils/BrainContext.jsx";
-import Home from "./pages/Home.jsx";
-import {RingLoader} from "react-spinners";
+import { Route, Routes } from "react-router";
+import AboutUs from "./pages/AboutPage/AboutUs.jsx";
+import { SceneProvider } from "./utils/BrainContext.jsx";
+import Home from "./pages/HomePage/Home.jsx";
+import { RingLoader } from "react-spinners";
 
 export default function App() {
     const [loading, setLoading] = useState(false);
@@ -13,7 +12,7 @@ export default function App() {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 0) // <- Set loading screen animation time
+        }, 1000) // <- Set loading screen animation time
     }, [])
 
     return (

@@ -1,5 +1,4 @@
 import React, { createContext, useContext } from 'react'
-import SceneInit from "./SceneInit.js";
 
 const SceneContext = createContext()
 
@@ -8,14 +7,16 @@ export function useScene() {
 }
 
 export function SceneProvider ({ children }) {
+    const INTACT_VIEW = "Intact View";
+    const PARTED_VIEW = "Parted View";
     const INTACT_BRAIN = 'src/brain-model/Brain.gltf';
     const PARTED_BRAIN = 'src/brain-model/partedBrain.glb';
-    const myCanvas = new SceneInit('brainCanvas');
 
     const value = {
-        myCanvas,
         INTACT_BRAIN,
-        PARTED_BRAIN
+        PARTED_BRAIN,
+        INTACT_VIEW,
+        PARTED_VIEW
     }
 
     return (

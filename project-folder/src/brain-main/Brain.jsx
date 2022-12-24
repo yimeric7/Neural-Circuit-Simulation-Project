@@ -1,35 +1,30 @@
-import { useEffect } from 'react';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import SceneInit from '../utils/SceneInit';
+import { useEffect, useState } from 'react';
+import { renderNewModel, createNewPartedBrain, createNewIntactBrain } from './BrainRender.js'
+import { useScene } from '../utils/BrainContext.jsx'
 
 export default function Brain() {
+    const { myCanvas, PARTED_BRAIN, INTACT_BRAIN } = useScene();
+    const [buttonText, setButtonText] = useState("Intact View");
+
+    // Initial Render of intact brain model
     useEffect(() => {
-        const test = new SceneInit('brainCanvas');
-        test.initialize();
-        test.animate();
+        renderNewModel(myCanvas, INTACT_BRAIN)
+    }, [])
 
-        let loadedModel;
-        const brainLoader = new GLTFLoader();
-        brainLoader.load('src/brain-model/scene.gltf', (gltfScene) => {
-            loadedModel = gltfScene;
-            gltfScene.scene.rotation.x = Math.PI / 8;
-            gltfScene.scene.position.y = -5;
-            gltfScene.scene.scale.set(50, 50, 50);
-            test.scene.add(gltfScene.scene);
-        });
-
-        const animate = () => {
-            if (loadedModel) {
-                loadedModel.scene.rotation.y += 0.01;
-            }
-            requestAnimationFrame(animate);
-        };
-        animate();
-    }, []);
+    const changeView = () => {
+        if (buttonText !== 'Intact View') {
+            setButtonText('Intact View')
+            createNewIntactBrain(myCanvas, INTACT_BRAIN)
+        } else {
+            setButtonText("Parted View")
+            createNewPartedBrain(myCanvas, PARTED_BRAIN)
+        }
+    }
 
     return (
-        <div>
-            <canvas id="brainCanvas"/>
+        <div style={{backgroundColor: '#F5F5F5'}}>
+            <canvas id='brainCanvas' />
+            <button className='btn-ms-2' onClick={() => changeView()}>{buttonText}</button>
         </div>
     );
 }

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Motor and Sensory Areas of the Cerebral Cortex
+* source:	https://sketchfab.com/3d-models/motor-and-sensory-areas-of-the-cerebral-cortex-300c488c013f4d41ad5acab9ef08e50a
+* author:	University of Dundee, CAHID (https://sketchfab.com/anatomy_dundee)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Motor and Sensory Areas of the Cerebral Cortex" (https://sketchfab.com/3d-models/motor-and-sensory-areas-of-the-cerebral-cortex-300c488c013f4d41ad5acab9ef08e50a) by University of Dundee, CAHID (https://sketchfab.com/anatomy_dundee) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

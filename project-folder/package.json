@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "@react-three/drei": "^9.47.1",
     "@react-three/fiber": "^8.9.1",
     "bootstrap": "^5.2.3",
     "gsap": "^3.11.3",
+    "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-navbar-offcanvas": "^1.0.3",

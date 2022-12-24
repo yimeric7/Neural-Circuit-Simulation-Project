@@ -1,41 +1,4 @@
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
+/* NAVBAR */
 .navbar {
   background-color: #ECF5FF;
   width: 100%;
@@ -48,6 +11,7 @@
 
 .neuro {
   font-family: system-ui;
+  font-size: 37px;
   letter-spacing: -.25pc;
   color: #1E2D7B
 }
@@ -55,7 +19,7 @@
 .Sim {
   font-family: system-ui;
   font-weight: lighter;
-  letter-spacing: -.25pc;
+  font-size: 37px;
   color: rgb(146, 158, 246)
 }
 
@@ -68,19 +32,48 @@
 }
 
 .btn-ms-2:hover {
-  animation: bounce 1s ease-in-out ;
+  animation: bounce 1s ease-in-out;
 }
 
 nav {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ECF5FF;
+  text-align: center;
+
+}
+
+.neuroFooter {
+  font-family: system-ui;
+  font-size: 30px;
+  letter-spacing: -.25pc;
+  color: #1E2D7B
+}
+
+.SimFooter {
+  font-family: system-ui;
+  font-size: 30px;
+  font-weight: lighter;
+  color: rgb(146, 158, 246)
+}
+
+
+/* Animations */
+
 @keyframes bounce {
 
-  0%{
+  0% {
     transform: scale(1.25);
 
   }
+
   20%,
   60%,
   100% {
@@ -95,9 +88,9 @@ nav {
 
   80% {
     transform: translateY(-5px);
-    
+
   }
-  
+
 }
 
 @keyframes zoom {

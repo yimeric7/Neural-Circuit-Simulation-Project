@@ -16,17 +16,21 @@ const DropDownMenu = () => {
       setOpen(!open);
     };
     return (
-        <div className="dropdown">
+        <div className="dropdown" >
       <button  className="dropdown-btn" onClick={handleOpen}><span className='btnText'>Select Component ⮛</span></button>
       {open ? (
-        <ul className="menu">
-          <li c lassName="menu-item">
+        <div className="menu" >
             <button><span className='menuOption'>Menu 1</span></button>
-          </li>
-          <li className="menu-item">
             <button><span className='menuOption'>Menu 2</span></button>
-          </li>
-        </ul>
+            <button><span className='menuOption'>Menu 1</span></button>
+            <button><span className='menuOption'>Menu 2</span></button>
+            <button><span className='menuOption'>Menu 1</span></button>
+            <button><span className='menuOption'>Menu 2</span></button>
+            <button><span className='menuOption'>Menu 1</span></button>
+            <button><span className='menuOption'>Menu 2</span></button>
+            <button><span className='menuOption'>Menu 1</span></button>
+            <button><span className='menuOption'>Menu 2</span></button>
+        </div>
       ) : null}
     </div>
     )

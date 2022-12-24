@@ -30,7 +30,8 @@
     "scenejs": "^1.8.4",
     "three": "^0.147.0",
     "three-bas": "^3.0.0",
-    "twit": "^2.2.11"
+    "twit": "^2.2.11",
+    "valtio": "^1.7.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

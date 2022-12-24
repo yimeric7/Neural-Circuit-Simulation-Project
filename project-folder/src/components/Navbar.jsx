@@ -13,9 +13,9 @@ export default function UserNavbar() {
                 <Container >
                     <h1 onClick={() => nav('/')}><img src={logo} height='40px' /><span className='neuro'>neuro</span ><span className='Sim'>SIM</span></h1>
                     <div className="menu-me-left">
-                        <button className='btn-ms-2' margin-right='20px' onClick={() => nav('/')}>Home</button>
-                        <button className='btn-ms-2' onClick={() => nav('/about')}>About Us</button>
-                        <button className='btn-ms-2' onClick={() => nav('/test')}>Test</button>
+                        <button className='btn-ms-2' margin-right='20px' onClick={() => nav('/')}><span className='btnText' >Home</span></button>
+                        <button className='btn-ms-2' onClick={() => nav('/about')}><span className='btnText' >About Us</span></button>
+                        <button className='btn-ms-2' onClick={() => nav('/test')}><span className='btnText' >Test</span></button>
                     </div>
                 </Container>
             </Navbar>

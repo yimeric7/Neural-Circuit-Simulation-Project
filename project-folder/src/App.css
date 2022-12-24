@@ -1,6 +1,6 @@
 /* NAVBAR */
 .navbar {
-  background-color: #ECF5FF;
+  background-color:aliceblue;
   width: 100%;
   margin-top: 0;
 }
@@ -17,14 +17,14 @@
 }
 
 .Sim {
-  font-family: system-ui;
+  font-family: 'Futura Windows', system-ui;
   font-weight: lighter;
   font-size: 37px;
   color: rgb(146, 158, 246)
 }
 
 .btn-ms-2 {
-  background-color: rgba(146, 158, 246, 0.279);
+  background-color: #1E2D7B;
   border-radius: 17px;
   margin-left: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
@@ -35,6 +35,11 @@
   animation: bounce 1s ease-in-out;
 }
 
+.btnText{
+  color: aliceblue;
+  font-family: Century Gothic;
+  font-size: 15px;
+}
 nav {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
@@ -51,20 +56,38 @@ nav {
   text-align: center;
 }
 
+.footerHead {
+  margin-top: 2%;
+  font-family: Century Gothic ;
+  color: aliceblue;
+}
+.footerText {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  font-family: Century Gothic ;
+  color: aliceblue;
+}
+
+.link-names {
+  font-family: Century Gothic ;
+}
+.rounded-5{
+  margin-right: 17px;
+}
 .neuroFooter {
   font-family: system-ui;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 33px;
+  line-height: 33px;
   letter-spacing: -.25pc;
-  color: #1E2D7B
+  color:aliceblue
 }
 
 .SimFooter {
-  font-family: system-ui;
-  font-size: 60px;
-  line-height: 60px;
+  font-family: 'Futura Windows',system-ui;
+  font-size: 33px;
+  line-height: 33px;
   font-weight: lighter;
-  color: rgb(146, 158, 246)
+  color: rgb(114, 117, 138)
 }
 
 

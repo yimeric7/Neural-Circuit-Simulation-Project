@@ -1,39 +1,33 @@
-import React, { useRef } from 'react'
+import React, { useRef, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Mesh } from "three";
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import { AmbientLight, Mesh } from "three";
 import UserNavbar from "../components/Navbar";
 import Footer from "../components/Footer.jsx";
+const PARTED_BRAIN = 'src/brain-model/partedBrain.glb';
+import { IntactBrain } from '../brain-model/IntactBrain';
+import { PartedBrain } from '../brain-model/PartedBrain';
 
-function Cube() {
-    const meshRef = useRef();
-
-    useFrame(() => {
-        if (!meshRef.current) {
-            return;
-        }
-
-        meshRef.current.rotation.x += 0.01;
-        meshRef.current.rotation.y += 0.01;
-    });
-
+const renderBrain = (TYPE_BRAIN, coordinates = new Array[3]) => {
     return (
-        <mesh ref={meshRef}>
-            <boxGeometry/>
-            <meshStandardMaterial />
-        </mesh>
+        <Canvas camera={{ position: coordinates }}>
+            <ambientLight intensity={1.2} />
+            <Suspense fallback={null}>
+                <TYPE_BRAIN />
+            </Suspense>
+        </Canvas>
     )
 }
 
+
 export default function Test() {
     return (
-        <div style={{backgroundColor: '#F5F5F5', width: '100%', margin: 'auto'}}>
+        <div style={{ backgroundColor: '#F5F5F5', width: '100%', margin: 'auto' }}>
             <UserNavbar />
-            <div style={{width: '100%', height: '900px'}}>
-                <Canvas>
-                    <Cube />
-                </Canvas>
+            <div style={{ width: '100%', height: '900px' }}>
+                {renderBrain(IntactBrain, [20, 0, 20])}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

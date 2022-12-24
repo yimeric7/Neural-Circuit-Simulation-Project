@@ -11,6 +11,7 @@ export function IntactBrain(props) {
   const meshRef = useRef();
   const snap = useSnapshot(state);
 
+  // most likely remove rotation eventually
   useFrame(() => {
         if (!meshRef.current) {
             return;

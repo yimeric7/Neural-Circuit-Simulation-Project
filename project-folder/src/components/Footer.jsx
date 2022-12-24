@@ -39,7 +39,7 @@ export default function Footer() {
 
           <MDBBtn outline color="light" floating className='rounded-5'
                   href='https://www.linkedin.com/in/mohammad-al-robaie-2b3572205/' role='button'>
-            <span className='link-names'>Mohammad Al-Robaie &nbsp;</span>
+            <span className='link-names'>Mohammad Al-Robaie - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
 

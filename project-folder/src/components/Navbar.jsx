@@ -11,10 +11,11 @@ export default function UserNavbar() {
         <div style={{ padding: '3rem', backgroundColor: '#F5F5F5' }}>
             <Navbar fixed='top' expand="lg" variant="light" >
                 <Container >
-                    <h1><img src={logo} height='40px' /><span className='neuro'>neuro</span ><span className='Sim'>SIM</span></h1>
+                    <h1 onClick={() => nav('/')}><img src={logo} height='40px' /><span className='neuro'>neuro</span ><span className='Sim'>SIM</span></h1>
                     <div className="menu-me-left">
                         <button className='btn-ms-2' margin-right='20px' onClick={() => nav('/')}>Home</button>
                         <button className='btn-ms-2' onClick={() => nav('/about')}>About Us</button>
+                        <button className='btn-ms-2' onClick={() => nav('/test')}>Test</button>
                     </div>
                 </Container>
             </Navbar>

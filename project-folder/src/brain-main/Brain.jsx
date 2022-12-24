@@ -22,7 +22,7 @@ export default function Brain() {
     }
 
     return (
-        <div style={{backgroundColor: '#F5F5F5'}}>
+        <div style={{backgroundColor: '#F5F5F5', width: '100%', margin: 'auto'}}>
             <canvas id='brainCanvas' />
             <button className='btn-ms-2' onClick={() => changeView()}>{buttonText}</button>
         </div>

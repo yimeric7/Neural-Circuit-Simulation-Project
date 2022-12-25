@@ -11,14 +11,6 @@ export function IntactBrain(props) {
   const meshRef = useRef();
   const snap = useSnapshot(state);
 
-  // most likely remove rotation eventually
-  useFrame(() => {
-        if (!meshRef.current) {
-            return;
-        }
-        meshRef.current.rotation.y += 0.01;
-    });
-
   // Sets menu items
   useEffect(() => {
     meshRef.current.children.map(mesh => {
@@ -36,8 +28,8 @@ export function IntactBrain(props) {
     >
       <mesh material-color={snap.items.Olfactory_Bulb_R} geometry={nodes.Olfactory_Bulb_R.geometry} material={materials.Olfactory_bulb} position={[2.74, 8.48, 1.12]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
       <mesh material-color={snap.items.Olfactory_Bulb_L} geometry={nodes.Olfactory_Bulb_L.geometry} material={materials['Olfactory_bulb.001']} position={[-0.02, 6.74, -3.13]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
-      <mesh material-color={snap.items.Cerebrum_R} geometry={nodes.Cerebrum_R.geometry} material={materials.Cerebrum_R} position={[2.74468, 8.48406, 1.12119]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
-      <mesh material-color={snap.items.Cerebrum_L} geometry={nodes.Cerebrum_L.geometry} material={materials.Cerebrum_L} position={[-2.78684, 8.5577, 1.11275]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
+      <mesh material-color={snap.items.Cerebrum_R} geometry={nodes.Cerebrum_R.geometry} material={materials.Cerebrum_R} position={[4.74468, 8.48406, 1.12119]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
+      <mesh material-color={snap.items.Cerebrum_L} geometry={nodes.Cerebrum_L.geometry} material={materials.Cerebrum_L} position={[-4.78684, 8.5577, 1.11275]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
       <mesh geometry={nodes.Pons.geometry} material={materials.Brain_base} position={[-0.02, -161.81, 0.84]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={2.54} />
       <mesh geometry={nodes.Cerebral_Peduncle.geometry} material={materials['Brain_base.001']} position={[-0.02, 2.88, 1.91]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />
       <mesh geometry={nodes.Pituitary_Gland.geometry} material={materials['Brain_base.002']} position={[-0.02, 6.81, 0.98]} rotation={[-Math.PI / 2, 0, Math.PI]} scale={0.01} />

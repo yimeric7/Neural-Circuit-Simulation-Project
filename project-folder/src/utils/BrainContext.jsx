@@ -8,10 +8,7 @@ export function useScene() {
 }
 
 export function SceneProvider ({ children }) {
-    const INTACT_VIEW = "Intact View";
-    const PARTED_VIEW = "Parted View";
     const INTACT_BRAIN = 'src/brain-model/imgs/IntactBrain.glb';
-    const PARTED_BRAIN = 'src/brain-model/imgs/PartedBrain.glb';
     let menuItems = [];
 
     // depending on what's being selected (description will display)
@@ -33,9 +30,6 @@ export function SceneProvider ({ children }) {
 
     const value = {
         INTACT_BRAIN,
-        PARTED_BRAIN,
-        INTACT_VIEW,
-        PARTED_VIEW,
         state,
         menuItems
     }

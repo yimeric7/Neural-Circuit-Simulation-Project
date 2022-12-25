@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import UserNavbar from "../../components/Navbar.jsx";
 import Footer from "../../components/Footer.jsx";
 import { IntactBrain } from '../../brain-model/IntactBrain.jsx';
@@ -13,7 +13,7 @@ export default function Home() {
             <Pointer />
             <div style={{ width: '100%', height: '900px' }}>
                 <DropDownMenu />
-                {renderBrain(IntactBrain, [20, 0, 20])}
+                {renderBrain(IntactBrain, [10, 1, 23])}
             </div>
             <Footer />
         </div>

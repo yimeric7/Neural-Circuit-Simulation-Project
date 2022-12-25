@@ -6,11 +6,11 @@ export default function Footer() {
     <MDBFooter className='footer'>
       <div style={{backgroundColor: '#1E2D7B'}}>
       <h1 onClick={() => nav('/')}><span className='neuroFooter'>neuro</span ><span className='SimFooter'>SIM</span></h1>
-        <div style={{width: '100%', textAlign: 'center', padding: '1rem'}}>
+        <div style={{width: '100%', textAlign: 'center', padding: '.5rem'}}>
           <h1  class = 'footerHead'>Thank you for checking out our project!</h1>
         </div>
         <section style={{width: '66%', display: 'flex', justifySelf: 'center',
-          justifyContent: 'center', marginTop: '1rem',
+          justifyContent: 'center', marginTop: '.5rem',
           margin: 'auto'}}>
           <p  class = 'footerText' style={{fontSize: '17px', lineHeight: '20px' }}>
             If you enjoyed it, we encourage you to check out the LinkedIn profiles of

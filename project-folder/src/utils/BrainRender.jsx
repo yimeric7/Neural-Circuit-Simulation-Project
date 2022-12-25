@@ -12,7 +12,7 @@ export default function renderBrain(TYPE_BRAIN, coordinates = new Array[3]) {
                 <Environment files='src/assets/env.hdr'/>
                 <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={2} far={1} />
             </Suspense>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
         </Canvas>
     )
 }

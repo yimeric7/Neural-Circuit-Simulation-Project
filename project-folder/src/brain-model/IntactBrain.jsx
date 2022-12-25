@@ -13,6 +13,7 @@ export function IntactBrain(props) {
 
   // Sets menu items
   useEffect(() => {
+    meshRef.current.rotation.y += 2.5;
     meshRef.current.children.map(mesh => {
       menuItems.push(mesh.material.name)
     })

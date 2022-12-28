@@ -19,7 +19,7 @@ export default function Footer() {
         </section>
         <section style={{marginTop: '2rem', marginBottom: '2rem'}}>
           <MDBBtn outline color="light" floating className='rounded-5'
-                  href='https://www.linkedin.com/in/eric-hashmap/' role='button'>
+                  href='https://www.linkedin.com/in/yimeric7/' role='button'>
             <span className='link-names'>Eric Yim - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
@@ -39,7 +39,7 @@ export default function Footer() {
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
           <MDBBtn outline color="light" floating className='rounded-5'
-                  href='https://www.linkedin.com/in/asim-ali-5780b8239/' role='button'>
+                  href='https://www.linkedin.com/in/asimmoali/' role='button'>
             <span className='link-names'>Asim Ali - &nbsp;</span>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>

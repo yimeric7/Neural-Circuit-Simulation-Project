@@ -11,7 +11,7 @@ export default function renderBrain(TYPE_BRAIN, coordinates = new Array[3]) {
             <Stage intensity={.5} contactShadowOpacity={5} /> 
 
                 <TYPE_BRAIN />
-                <Environment files='src/assets/sierraEnv.hdr'/>
+                <Environment files='src/assets/rustig.hdr'/>
                 <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={2} far={1} />
             </Suspense>
             <OrbitControls enableZoom={false} />

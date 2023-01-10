@@ -11,9 +11,9 @@ export default function Home() {
         <div style={{ backgroundColor: '#F5F5F5', width: '100%', margin: 'auto' }}>
             <UserNavbar />
             <Pointer />
-            <div style={{ width: '100%', height: '900px' }}>
+            <div style={{ width: '100%', height: '900px'}}>
                 <DropDownMenu />
-                {renderBrain(IntactBrain, [10, 1, 23])}
+                {renderBrain(IntactBrain, [10, 1, 27])}
             </div>
             <Footer />
         </div>

@@ -4,7 +4,7 @@ import { OrbitControls, ContactShadows, Environment, Stage } from '@react-three/
 
 export default function renderBrain(TYPE_BRAIN, coordinates = new Array[3]) {
     return (
-        <Canvas camera={{ position: coordinates }}>
+        <Canvas camera={{ position: coordinates }} style={{ marginLeft: '25%', width:'50%', height:'50%'}}>
             <ambientLight intensity={1.5} />
             <spotLight intensity={1} angle={[5,20,20]}/>
             <Suspense fallback={null}>
@@ -14,7 +14,7 @@ export default function renderBrain(TYPE_BRAIN, coordinates = new Array[3]) {
                 <Environment files='src/assets/rustig.hdr'/>
                 <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={2} far={1} />
             </Suspense>
-            <OrbitControls enableZoom={false} />
+            <OrbitControls enableZoom={false}/>
         </Canvas>
     )
 }

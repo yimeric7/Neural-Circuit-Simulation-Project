@@ -8,7 +8,7 @@ export default function DropDownMenu () {
     };
     return (
         <div className="dropdown" >
-            <button  className="dropdown-btn" onClick={handleOpen}><span className='btnText'>Select Component ⮛</span></button>
+            <button  className="dropdown-btn" onClick={handleOpen}><span className='btnText'>Select Brainpart</span></button>
             {open ? (
                 <div className="menu" >
                     <button><span className='menuOption'>Menu 1</span></button>

@@ -1,37 +1,68 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import UserNavbar from "../../components/Navbar.jsx";
 import Footer from "../../components/Footer.jsx";
-import { IntactBrain } from '../../brain-model/IntactBrain.jsx';
-import { PartedBrain } from '../../brain-model/PartedBrain.jsx';
 import { useScene } from "../../utils/BrainContext.jsx";
 import renderBrain from '../../utils/BrainRender.jsx';
 import DropDownMenu from "../../components/DropDownMenu.jsx";
+import BrainControlPanel from "../../components/BrainControlPanel.jsx";
+import BrainInfoCard from "../../components/BrainInfoCard.jsx";
+import { BrainModel, brainPartFacts } from '../../brain-model/BrainModel.jsx';
 
 export default function Home() {
-    const { INTACT_VIEW, PARTED_VIEW } = useScene();
-    const [buttonText, setButtonText] = useState(INTACT_VIEW);
-    const [view, setView] = useState(renderBrain(IntactBrain, [20, 0, 20]))
-
-    const changeView = () => {
-        if (buttonText !== INTACT_VIEW) {
-            setButtonText(INTACT_VIEW)
-            setView(renderBrain(IntactBrain, [20, 0, 20]))
-        } else {
-            setButtonText(PARTED_VIEW)
-            setView(renderBrain(PartedBrain, [20, 0, 50]))
+    // Get context values and state setters
+    const { 
+        expansionValue, 
+        setExpansionValue, 
+        zoomLevel, 
+        setZoomLevel, 
+        selectBrainPart 
+    } = useScene();
+    
+    // Local state for the selected brain part
+    const [selectedPart, setSelectedPart] = useState(null);
+    
+    // Render the brain model with current parameters
+    const brainView = renderBrain(
+        BrainModel, 
+        [0, 0, 30], 
+        { 
+            expansionValue, 
+            zoomLevel,
+            selectedPart,
+            onSelectPart: (partInfo) => {
+                setSelectedPart(partInfo);
+                selectBrainPart(partInfo);
+            }
         }
-    }
+    );
+    
+    // Handle selecting a brain part from the dropdown
+    const handleSelectPartFromDropdown = (partId) => {
+        if (brainPartFacts[partId]) {
+            setSelectedPart(brainPartFacts[partId]);
+        }
+    };
 
     return (
         <div style={{ backgroundColor: '#F5F5F5', width: '100%', margin: 'auto' }}>
             <UserNavbar />
-            <div style={{ width: '100%', height: '900px' }}>
-                <DropDownMenu />
-                <button className='view-button' position='center' onClick={() => changeView()}>
-                    <span className='btnText' >{buttonText}</span></button>
-                {view}
+            <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+                <div className="canvas-container">
+                    {brainView}
+                </div>
+                
+                <DropDownMenu onSelectPart={handleSelectPartFromDropdown} />
+                
+                <BrainControlPanel 
+                    expansionValue={expansionValue}
+                    setExpansionValue={setExpansionValue}
+                    zoomLevel={zoomLevel}
+                    setZoomLevel={setZoomLevel}
+                />
+                
+                {selectedPart && <BrainInfoCard selectedPart={selectedPart} />}
             </div>
             <Footer />
         </div>
-    )
+    );
 }

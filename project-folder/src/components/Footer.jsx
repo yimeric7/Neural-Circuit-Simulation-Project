@@ -13,7 +13,7 @@ export default function Footer() {
         <section style={{width: '66%', display: 'flex', justifySelf: 'center',
           justifyContent: 'center'}}>
           <p  class = 'footerText' style={{fontSize: '17px', lineHeight: '20px' }}>
-            Thanks for trying out the tool! I hope you have a great day - Zen Lin
+            Thanks for trying out the tool! I hope you have a great day!
           </p>
         </section>
       </div>

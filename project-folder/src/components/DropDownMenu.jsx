@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// Brain part facts
+// All brain parts with facts - matching brainPartFacts in BrainModel.jsx
 const brainParts = [
   { id: "Cerebrum_R", name: "Right Cerebrum" },
   { id: "Cerebrum_L", name: "Left Cerebrum" },
@@ -16,6 +16,13 @@ const brainParts = [
   { id: "Pituitary_Gland", name: "Pituitary Gland" },
   { id: "Olfactory_Bulb_R", name: "Right Olfactory Bulb" },
   { id: "Olfactory_Bulb_L", name: "Left Olfactory Bulb" },
+  { id: "Fornix", name: "Fornix" },
+  { id: "Putamen", name: "Putamen" },
+  { id: "Optic_Chiasm", name: "Optic Chiasm" },
+  { id: "Mammillary_Body_R", name: "Right Mammillary Body" },
+  { id: "Mammillary_Body_L", name: "Left Mammillary Body" },
+  { id: "Arteries", name: "Cerebral Arteries" },
+  { id: "Veins", name: "Cerebral Veins" },
 ];
 
 export default function DropDownMenu({ onSelectPart }) {

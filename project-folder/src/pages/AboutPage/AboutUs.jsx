@@ -17,7 +17,7 @@ export default function AboutUs() {
 
                 {/*<UserNavBar />*/}
                 <div style={{width: '100%', textAlign: 'center', padding: '2rem', maxWidth: '800px', margin: 'auto'}}>
-                    Zen Lin - tried to build this tool like 3-4 years ago but failed miserably. He came back in 2025 equipped with cursor and claude 3.7 sonnet to finish the job. It is like someone grew up to beat the level they could never beat as a kid.
+                    This project was attempted 3-4 years ago but failed miserably. In 2025, we came back equipped with Cursor and Claude to finish the job. It is like someone grew up to beat the level they could never beat as a kid.
                 </div>
             </div>
             <Footer/>

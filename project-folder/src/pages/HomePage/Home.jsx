@@ -22,11 +22,12 @@ export default function Home() {
     const [selectedPart, setSelectedPart] = useState(null);
     
     // Render the brain model with current parameters
+    // Camera position: [x, y, z] - y=7 centers the brain better vertically
     const brainView = renderBrain(
-        BrainModel, 
-        [0, 0, 30], 
-        { 
-            expansionValue, 
+        BrainModel,
+        [0, 7, 25],
+        {
+            expansionValue,
             zoomLevel,
             selectedPart,
             onSelectPart: (partInfo) => {
